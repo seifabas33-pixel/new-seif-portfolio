@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body,
+  #root {
+    min-height: 100%;
+    background: #0c0c0c;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Kanit', sans-serif;
+    color: #d7e2ea;
+    background: #0c0c0c;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@layer components {
+  .hero-heading {
+    background: linear-gradient(180deg, #646973 0%, #bbccd7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    border-radius: 9999px;
+    border: 2px solid #ffffff;
+    outline: 2px solid #ffffff;
+    outline-offset: -3px;
+    background: linear-gradient(123deg, #18011f 7%, #b600a8 37%, #7621b0 72%, #be4c00 100%);
+    box-shadow: 0 4px 4px rgba(181, 1, 167, 0.25), inset 4px 4px 12px #7721b1;
+    padding: 0.75rem 2rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .contact-button:hover {
+    transform: translateY(-1px);
+    opacity: 0.96;
+  }
+
+  .live-project-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    border-radius: 9999px;
+    border: 2px solid #d7e2ea;
+    padding: 0.75rem 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #d7e2ea;
+    transition: background-color 0.2s ease;
+  }
+
+  .live-project-button:hover {
+    background: rgb(215 226 234 / 0.1);
+  }
+
+  .project-sticky {
+    position: sticky;
+    top: calc(6rem + var(--card-offset));
+  }
+}
+
+@media (min-width: 640px) {
+  .contact-button {
+    padding: 0.875rem 2.5rem;
+    font-size: 0.875rem;
+  }
+
+  .live-project-button {
+    padding: 0.875rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-button {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+  }
+
+  .project-sticky {
+    top: calc(8rem + var(--card-offset));
+  }
+}
