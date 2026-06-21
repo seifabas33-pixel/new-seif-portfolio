@@ -460,7 +460,7 @@ function HeroSection() {
           y={20}
           className="max-w-[160px] text-[clamp(0.75rem,1.4vw,1.5rem)] font-light uppercase leading-snug tracking-wide text-[#D7E2EA] sm:max-w-[220px] md:max-w-[260px]"
         >
-          Creating a smile in dashboard
+          Creating smiles from dashboards
         </FadeIn>
         <FadeIn delay={0.5} y={20}>
           <ContactButton />
