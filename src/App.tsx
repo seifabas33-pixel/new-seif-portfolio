@@ -36,33 +36,33 @@ const marqueeImages = [
 const services = [
   {
     number: '01',
-    name: '3D Modeling',
+    name: 'Entertainment Programs',
     description:
-      'Creation of detailed objects, characters, or environments tailored to specific client needs, ideal for games, products, and visualizations.',
+      'Designing and executing unforgettable entertainment programs that create smiles and lasting memories for guests.',
   },
   {
     number: '02',
-    name: 'Rendering',
+    name: 'Event Management',
     description:
-      'High-quality, photorealistic renders that showcase designs with custom lighting, textures, and materials to bring concepts to life.',
+      'End-to-end event planning and coordination, from concept to execution, ensuring every detail creates a seamless experience.',
   },
   {
     number: '03',
-    name: 'Motion Design',
+    name: 'Guest Experience',
     description:
-      'Dynamic animations and motion graphics that add energy and storytelling to brands, products, and digital experiences.',
+      'Crafting exceptional guest journeys that leave lasting impressions and drive satisfaction across hospitality properties.',
   },
   {
     number: '04',
-    name: 'Branding',
+    name: 'Digital Platforms',
     description:
-      'Crafting cohesive visual identities -- from logos to full brand systems -- that communicate a clear and memorable presence.',
+      'Building and managing digital solutions like the Splash App to enhance guest engagement and streamline operations.',
   },
   {
     number: '05',
-    name: 'Web Design',
+    name: 'Team Leadership',
     description:
-      'Designing clean, modern, and conversion-focused websites with attention to layout, typography, and user experience.',
+      'Leading animation and entertainment teams to deliver high-energy, creative programs that exceed expectations.',
   },
 ]
 
@@ -70,7 +70,7 @@ const projects = [
   {
     number: '01',
     type: 'Client',
-    name: 'Nextlevel Studio',
+    name: 'Amarina Jannah',
     images: [
       'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db.png&w=1280&q=85',
       'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055431_11d841fd-8b41-46a5-82e4-b04f2407a7d8.png&w=1280&q=85',
@@ -79,8 +79,8 @@ const projects = [
   },
   {
     number: '02',
-    type: 'Personal',
-    name: 'Aura Brand Identity',
+    type: 'Client',
+    name: 'Hilton Marsalam',
     images: [
       'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055654_911201c5-36d9-4bc6-bac7-331adfce159f.png&w=1280&q=85',
       'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055723_5ceda0b8-d9c2-4665-b2e3-83ba19ba76d1.png&w=1280&q=85',
@@ -90,11 +90,31 @@ const projects = [
   {
     number: '03',
     type: 'Client',
-    name: 'Solaris Digital',
+    name: 'Old Palace Resort',
     images: [
       'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055759_963cfb0b-4bd1-4b0f-9d0a-09bd6cf95b2f.png&w=1280&q=85',
       'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_060108_438f781a-9846-4dcc-89ab-c4e6cb830f5b.png&w=1280&q=85',
       'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055818_9d062121-ad7e-46b9-999a-1a6a692ef1ee.png&w=1280&q=85',
+    ],
+  },
+  {
+    number: '04',
+    type: 'Client',
+    name: 'Homes Bay Sales Agent',
+    images: [
+      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db.png&w=1280&q=85',
+      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055431_11d841fd-8b41-46a5-82e4-b04f2407a7d8.png&w=1280&q=85',
+      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055451_e317bf2d-28d4-48cc-86b0-6f72f25b6327.png&w=1280&q=85',
+    ],
+  },
+  {
+    number: '05',
+    type: 'Personal',
+    name: 'Splash App',
+    images: [
+      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055654_911201c5-36d9-4bc6-bac7-331adfce159f.png&w=1280&q=85',
+      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055723_5ceda0b8-d9c2-4665-b2e3-83ba19ba76d1.png&w=1280&q=85',
+      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055753_adc5dcbd-a8e6-49c0-b43a-9b030d835cea.png&w=1280&q=85',
     ],
   },
 ]
@@ -297,7 +317,7 @@ function Magnet({
 
 function ContactButton({ className = '' }: { className?: string }) {
   return (
-    <a href="#contact" className={`contact-button ${className}`}>
+    <a href="mailto:seif.abas33@gmail.com" className={`contact-button ${className}`}>
       <Mail className="h-4 w-4 md:h-[18px] md:w-[18px]" strokeWidth={2.2} />
       <span>Contact Me</span>
     </a>
@@ -415,7 +435,7 @@ function HeroSection() {
           y={40}
           className="hero-heading w-full whitespace-nowrap text-[14vw] font-black uppercase leading-none tracking-tight sm:text-[15vw] md:text-[16vw] lg:text-[17.5vw]"
         >
-          Hi, i&apos;m jack
+          Hi, i&apos;m Seif
         </FadeIn>
       </div>
 
@@ -427,7 +447,7 @@ function HeroSection() {
         <Magnet>
           <img
             src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png"
-            alt="Jack portrait"
+            alt="Seif Abas portrait"
             className="h-auto w-full object-contain"
           />
         </Magnet>
@@ -440,7 +460,7 @@ function HeroSection() {
           y={20}
           className="max-w-[160px] text-[clamp(0.75rem,1.4vw,1.5rem)] font-light uppercase leading-snug tracking-wide text-[#D7E2EA] sm:max-w-[220px] md:max-w-[260px]"
         >
-          a 3d creator driven by crafting striking and unforgettable projects
+          creating smile from dashboard
         </FadeIn>
         <FadeIn delay={0.5} y={20}>
           <ContactButton />
@@ -510,9 +530,9 @@ function AboutSection() {
           About me
         </FadeIn>
 
-        <div id="contact" className="flex flex-col items-center gap-16 sm:gap-20 md:gap-24">
+        <div className="flex flex-col items-center gap-16 sm:gap-20 md:gap-24">
           <AnimatedText
-            text="With more than five years of experience in design, i focus on branding, web design, and user experience, i truly enjoy working with businesses that aim to stand out and present their best image. Let's build something incredible together!"
+            text="I'm Seif Abas — I create smiles from dashboards. With a passion for entertainment and hospitality, I craft unforgettable experiences, entertainment programs, digital platforms, and memories that last. Let's build something incredible together!"
             className="max-w-[560px] text-center text-[clamp(1rem,2vw,1.35rem)] font-medium leading-relaxed text-[#D7E2EA]"
           />
           <ContactButton className="mx-auto" />
@@ -649,6 +669,53 @@ function ProjectsSection() {
   )
 }
 
+function ContactSection() {
+  return (
+    <section
+      id="contact"
+      className="rounded-t-[40px] bg-white px-5 py-20 text-[#0C0C0C] sm:rounded-t-[50px] sm:px-8 sm:py-24 md:rounded-t-[60px] md:px-10 md:py-32"
+    >
+      <FadeIn
+        as="h2"
+        className="mb-16 text-center text-[clamp(3rem,12vw,160px)] font-black uppercase leading-none tracking-tight sm:mb-20 md:mb-28"
+      >
+        Contact
+      </FadeIn>
+
+      <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">
+        <FadeIn delay={0.1} className="flex flex-col gap-6">
+          <a
+            href="mailto:seif.abas33@gmail.com"
+            className="text-[clamp(1.1rem,2.5vw,1.8rem)] font-medium transition-opacity hover:opacity-70"
+          >
+            seif.abas33@gmail.com
+          </a>
+          <div className="flex flex-wrap items-center justify-center gap-6">
+            <a
+              href="https://instagram.com/se_if55"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-lg font-medium transition-opacity hover:opacity-70"
+            >
+              <ArrowUpRight className="h-4 w-4" />
+              Instagram
+            </a>
+            <a
+              href="https://wa.me/201001570273"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-lg font-medium transition-opacity hover:opacity-70"
+            >
+              <ArrowUpRight className="h-4 w-4" />
+              WhatsApp
+            </a>
+          </div>
+        </FadeIn>
+      </div>
+    </section>
+  )
+}
+
 function App() {
   return (
     <main className="min-h-screen overflow-x-clip bg-[#0C0C0C] text-[#D7E2EA]">
@@ -657,6 +724,7 @@ function App() {
       <AboutSection />
       <ServicesSection />
       <ProjectsSection />
+      <ContactSection />
     </main>
   )
 }
