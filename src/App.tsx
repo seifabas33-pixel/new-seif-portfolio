@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type CSSProperties, type HTMLAttributes, type ReactNode } from 'react'
 import { ArrowUpRight, Mail } from 'lucide-react'
-import { motion, useScroll, useTransform, type MotionValue } from 'framer-motion'
+import { motion, useScroll, useTransform, type HTMLMotionProps, type MotionValue } from 'framer-motion'
 
 const navLinks = [
   { href: '#about', label: 'About' },
@@ -142,16 +142,21 @@ const fadeMotionElements = {
   section: motion.create('section'),
 } satisfies Record<FadeTag, ReturnType<typeof motion.create>>
 
-type FadeInProps = {
-  as?: FadeTag
-  children?: ReactNode
+type FadeInBaseProps = {
   delay?: number
   duration?: number
   x?: number
   y?: number
-  className?: string
-} & Record<string, unknown>
- 
+}
+
+type FadeInProps =
+  | (HTMLMotionProps<'div'> & FadeInBaseProps & { as?: 'div' })
+  | (HTMLMotionProps<'nav'> & FadeInBaseProps & { as: 'nav' })
+  | (HTMLMotionProps<'h1'> & FadeInBaseProps & { as: 'h1' })
+  | (HTMLMotionProps<'h2'> & FadeInBaseProps & { as: 'h2' })
+  | (HTMLMotionProps<'p'> & FadeInBaseProps & { as: 'p' })
+  | (HTMLMotionProps<'img'> & FadeInBaseProps & { as: 'img' })
+  | (HTMLMotionProps<'section'> & FadeInBaseProps & { as: 'section' })
 
 function FadeIn({
   as = 'div',
@@ -162,19 +167,53 @@ function FadeIn({
   y = 30,
   ...props
 }: FadeInProps) {
-  const Component = fadeMotionElements[as]
+  const sharedProps = {
+    initial: { opacity: 0, x, y },
+    whileInView: { opacity: 1, x: 0, y: 0 },
+    viewport: { once: true, margin: '50px', amount: 0 },
+    transition: { delay, duration, ease: [0.25, 0.1, 0.25, 1] },
+  } as const
 
-  return (
-    <Component
-      initial={{ opacity: 0, x, y }}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, margin: '50px', amount: 0 }}
-      transition={{ delay, duration, ease: [0.25, 0.1, 0.25, 1] }}
-      {...props}
-    >
-      {children}
-    </Component>
-  )
+  switch (as) {
+    case 'nav':
+      return (
+        <fadeMotionElements.nav {...sharedProps} {...(props as HTMLMotionProps<'nav'>)}>
+          {children}
+        </fadeMotionElements.nav>
+      )
+    case 'h1':
+      return (
+        <fadeMotionElements.h1 {...sharedProps} {...(props as HTMLMotionProps<'h1'>)}>
+          {children}
+        </fadeMotionElements.h1>
+      )
+    case 'h2':
+      return (
+        <fadeMotionElements.h2 {...sharedProps} {...(props as HTMLMotionProps<'h2'>)}>
+          {children}
+        </fadeMotionElements.h2>
+      )
+    case 'p':
+      return (
+        <fadeMotionElements.p {...sharedProps} {...(props as HTMLMotionProps<'p'>)}>
+          {children}
+        </fadeMotionElements.p>
+      )
+    case 'img':
+      return <fadeMotionElements.img {...sharedProps} {...(props as HTMLMotionProps<'img'>)} />
+    case 'section':
+      return (
+        <fadeMotionElements.section {...sharedProps} {...(props as HTMLMotionProps<'section'>)}>
+          {children}
+        </fadeMotionElements.section>
+      )
+    default:
+      return (
+        <fadeMotionElements.div {...sharedProps} {...(props as HTMLMotionProps<'div'>)}>
+          {children}
+        </fadeMotionElements.div>
+      )
+  }
 }
 
 type MagnetProps = HTMLAttributes<HTMLDivElement> & {
